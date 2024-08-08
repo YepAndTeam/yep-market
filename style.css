@@ -18,26 +18,31 @@ h1 {
 }
 
 .product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.7); /* Темная граница */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 15px;
 }
 
 .product img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.product h2 {
-    margin: 0;
-    font-size: 18px;
+.product-description {
+    background-color: rgba(0, 0, 0, 0.6); /* Черный фон с прозрачностью */
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.product p {
-    font-size: 16px;
-    color: #888;
+.product h2, .product p {
+    font-family: 'INTRO', sans-serif; /* Шрифт INTRO */
+}
+
 }
 
 button {
