@@ -6,8 +6,8 @@ body {
 }
 @font-face {
     font-family: 'INTRO';
-    src: url('font/IntroDemo-BlackCAPS.woff2') format('woff2'),
-         url('font/IntroDemo-BlackCAPS.woff') format('woff');
+    src: url('font/IntroDemo-BlackCAPS.otp') format('opentype'),
+         url('font/IntroDemo-BlackCAPS.otp') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
