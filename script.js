@@ -29,6 +29,16 @@ function addToCart(productName, price) {
     alert(`${productName} has been added to the cart.`);
     console.log(cart);
 }
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    var filter = this.value.toLowerCase();
+    var accounts = document.querySelectorAll('.account');
+
+    accounts.forEach(function(account) {
+        var text = account.textContent.toLowerCase();
+        account.style.display = text.includes(filter) ? '' : 'none';
+    });
+});
+
 
 // Вызовем функцию для отображения товаров при загрузке страницы
 renderProducts();
