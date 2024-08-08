@@ -42,9 +42,15 @@ h1 {
 .product h2, .product p {
     font-family: 'INTRO', sans-serif; /* Шрифт INTRO */
 }
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 .account {
@@ -66,6 +72,7 @@ h1 {
     border-right: 3px solid rgba(0,0,0,0.75);
     white-space: nowrap;
     font-family: 'INTRO', sans-serif;
+    width: 0; /* Не забудь добавить начальное значение для корректной работы анимации */
 }
 
 .account p {
@@ -74,9 +81,7 @@ h1 {
     border-right: 3px solid rgba(0,0,0,0.75);
     white-space: nowrap;
     font-family: 'INTRO', sans-serif;
-}
-
-
+    width: 0; /* Не забудь добавить начальное значение для корректной работы анимации */
 }
 
 button {
