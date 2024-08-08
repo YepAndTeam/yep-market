@@ -1,15 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'INTRO', Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
 @font-face {
     font-family: 'INTRO';
-    src: url('font/IntroDemo-BlackCAPS.otf') format('otf'),
+    src: url('font/IntroDemo-BlackCAPS.woff2') format('woff2'),
+         url('font/IntroDemo-BlackCAPS.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 
 .container {
     width: 80%;
@@ -46,7 +48,7 @@ h1 {
 }
 
 .product h2, .product p {
-    font-family: 'INTRO', sans-serif; /* Шрифт INTRO */
+    font-family: 'INTRO', Arial, sans-serif;
 }
 
 @keyframes fadeIn {
@@ -77,7 +79,7 @@ h1 {
     overflow: hidden;
     border-right: 3px solid rgba(0,0,0,0.75);
     white-space: nowrap;
-    font-family: 'INTRO', sans-serif;
+   font-family: 'INTRO', Arial, sans-serif;
     width: 0; /* Не забудь добавить начальное значение для корректной работы анимации */
 }
 
@@ -86,7 +88,7 @@ h1 {
     overflow: hidden;
     border-right: 3px solid rgba(0,0,0,0.75);
     white-space: nowrap;
-    font-family: 'INTRO', sans-serif;
+   font-family: 'INTRO', Arial, sans-serif;
     width: 0; /* Не забудь добавить начальное значение для корректной работы анимации */
 }
 
