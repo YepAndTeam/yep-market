@@ -42,6 +42,40 @@ h1 {
 .product h2, .product p {
     font-family: 'INTRO', sans-serif; /* Шрифт INTRO */
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.account {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    margin-bottom: 20px;
+}
+
+.account img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.account h2 {
+    animation: typing 2s steps(30, end) 1s forwards;
+    overflow: hidden;
+    border-right: 3px solid rgba(0,0,0,0.75);
+    white-space: nowrap;
+    font-family: 'INTRO', sans-serif;
+}
+
+.account p {
+    animation: typing 3s steps(50, end) 2s forwards;
+    overflow: hidden;
+    border-right: 3px solid rgba(0,0,0,0.75);
+    white-space: nowrap;
+    font-family: 'INTRO', sans-serif;
+}
+
 
 }
 
