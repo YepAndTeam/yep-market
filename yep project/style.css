@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Adventure_Indiana_Jones.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box; /* Устанавливает модель box-sizing для всех элементов */
+    margin: 0; /* Убирает отступы у всех элементов */
+    padding: 0; /* Убирает внутренние отступы у всех элементов */
+}
+
+body {
+    font-family: 'body font', sans-serif; /* Шрифт для всего документа */
+    background-color: white; /* Белый фон для страницы */
+    color: black; /* Черный цвет текста */
+}
+
+.logo-section {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px; /* Увеличим отступ для разделения логотипа и контента */
+    z-index: 1; /* Установите z-index для логотипа */
+}
+
+.logo-section h1 {
+    font-family: 'MyCustomFont', sans-serif;    
+    font-size: 76px; /* Размер шрифта, можно настроить */
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); /* Тень для логотипа */
+    margin: 0; /* Убрать отступы */
+}
+
+.logo-section::after {
+    content: 'YEP&SELL'; /* Используйте тот же текст, что и в логотипе */
+    position: absolute;
+    top: 100%; /* Помещаем отражение немного ниже логотипа */
+    left: 50%;
+    transform: translateX(-50%) scaleY(-1); /* Отражение по Y */
+    font-family: 'MyCustomFont', sans-serif; /* Применяем тот же шрифт */
+    font-size: 76px; /* Размер отражения, совпадающий с логотипом */
+    color: rgba(0, 0, 0, 0.3); /* Цвет отражения */
+    text-shadow: none; /* Убираем тень у отражения */
+    opacity: 0.5; /* Прозрачность отражения */
+    z-index: -1; /* Убираем отражение за другими элементами */
+    margin-top: 10px; /* Отступ сверху для отражения */
+}
+
+.divider {
+    width: 70%; /* Укороченная ширина линии */
+    height: 2px; /* Толщина линии */
+    background-color: black; /* Цвет линии */
+    margin: 20px auto; /* Центрирование линии и небольшой отступ снизу */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для объема */
+    position: relative; /* Устанавливаем относительное позиционирование для линии */
+}
+
+/* Обновление навигации */
+nav {
+    display: flex; /* Используем флекс для расположения элементов */
+    justify-content: space-between; /* Разделяем элементы на две стороны */
+    align-items: center; /* Центрируем по вертикали */
+    padding: 10px 0; /* Внутренние отступы для навигации */
+    position: absolute;
+    width: 100%;
+    top: 0; /* Размещаем навигацию над логотипом */
+    z-index: 2; /* Устанавливаем z-index для навигации выше, чем у линии */
+}
+
+.nav-left, .nav-right {
+    display: flex; /* Используем флекс для горизонтального расположения элементов */
+}
+
+.nav-left ul, .nav-right ul {
+    list-style-type: none; /* Убирает маркеры списка */
+    display: flex; /* Использует флекс для расположения элементов в строку */
+}
+
+.nav-left ul li, .nav-right ul li {
+    margin: 0 20px; /* Отступы между элементами списка */
+}
+
+nav a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    color: black; /* Цвет текста ссылок */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+nav a:hover {
+    color: gray; /* Цвет текста при наведении */
+}
+
+.main-content {
+    display: flex; /* Использует флекс для расположения карточек */
+    justify-content: center; /* Центрирует карточки */
+    flex-wrap: wrap; /* Переносит карточки на следующую строку */
+    margin: 100px 20px; /* Отступ сверху, чтобы карточки не перекрывали отражение */
+}
+
+.card {
+    width: 300px; /* Ширина карточки */
+    height: 400px; /* Высота карточки */
+    margin: 10px; /* Отступы между карточками */
+    border: 1px solid lightgray; /* Светло-серая рамка */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    display: flex; /* Использует флекс для размещения контента внутри карточки */
+    flex-direction: column; /* Устанавливает направление на вертикальное */
+    justify-content: space-between; /* Равномерное распределение контента */
+    padding: 15px; /* Внутренние отступы карточки */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавные переходы */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Более глубокая тень при наведении */
+}
+
+button {
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    background-color: black; /* Черный фон кнопки */
+    color: white; /* Белый цвет текста кнопки */
+    border: none; /* Убирает рамку */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    cursor: pointer; /* Указатель для курсора при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+button:hover {
+    background-color: gray; /* Цвет фона кнопки при наведении */
+}
+
+footer {
+    text-align: center; /* Центрирует текст футера */
+    padding: 20px; /* Внутренние отступы футера */
+    font-size: 14px; /* Размер шрифта в футере */
+}
+.nav-icon {
+    width: 24px; /* Установите желаемую ширину иконки */
+    height: 24px; /* Установите желаемую высоту иконки */
+    margin-left: 5px; /* Отступ слева от текста к иконке */
+    vertical-align: middle; /* Вертикальное выравнивание по центру */
+}
+
+/* Остальной CSS код остается прежним */

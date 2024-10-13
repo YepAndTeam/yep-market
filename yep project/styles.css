@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Adventure_Indiana_Jones.ttf') , format('typetrue');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'm';
+    src: url('Asterisk\ Sans\ Variable\ Italic.ttf'), format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'm', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.logo-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo-section h1 {
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 96px;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    background-color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+    margin: 20px;
+}
+
+.card {
+    flex-basis: calc(25% - 20px); /* Ширина каждой карточки (четверть ширины контейнера минус отступы) */
+    margin: 10px; /* Отступы между карточками */
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+
+.card img.account-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-weight: bold; /* Жирный текст для названия аккаунта */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-icon {
+    width: 20px; /* Минимальная ширина иконки */
+    height: 20px; /* Минимальная высота иконки */
+    margin-left: 5px; /* Отступ слева для отделения от текста */
+    vertical-align: middle; /* Выравнивание по вертикали с текстом */
+    transition: transform 0.3s; /* Плавный переход для эффекта при наведении */
+}
+
+.nav-icon:hover {
+    transform: scale(1.1); /* Увеличение иконки при наведении */
+}
+
+.about-us {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+.about-container {
+    display: flex; /* Включает флекс-контейнер */
+    justify-content: space-between; /* Размещает блоки слева и справа */
+    align-items: center; /* Выравнивание по центру вертикально */
+    gap: 20px; /* Отступ между элементами */
+}
+
+.info-box {
+    flex: 1; /* Позволяет занимать доступное пространство */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-box {
+    flex: 1; /* Позволяет занимать доступное пространство */
+    text-align: center;
+}
+
+
+
+.projects-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Анимация при прокрутке */
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.slider {
+    position: relative;
+    width: 500px; /* Установите ширину слайдера */
+    height: 500px; /* Установите высоту слайдера, чтобы соответствовать квадратным изображениям */
+    overflow: hidden; /* Скрыть слайды, выходящие за пределы контейнера */
+    margin: 0 auto; /* Центрирование слайдера */
+}
+
+.slide {
+    min-width: 100%; /* Каждый слайд занимает 100% ширины слайдера */
+    height: 100%; /* Высота равна высоте слайдера */
+    object-fit: cover; /* Позволяет изображению сохранять свои пропорции и заполнять слайд */
+}
+
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+
+/* Кнопки для навигации */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-btn-prev {
+    left: 10px;
+}
+
+.slider-btn-next {
+    right: 10px;
+}
+.info-box h2 {
+    font-size: 36px; /* Увеличиваем размер заголовка */
+    font-weight: bold; /* Делаем заголовок жирным */
+    margin-bottom: 15px; /* Отступ снизу для заголовка */
+}
+
+.info-box p {
+    font-size: 16px; /* Увеличиваем размер текста абзаца */
+    line-height: 1.5; /* Увеличиваем межстрочный интервал для лучшей читаемости */
+}
